@@ -1,18 +1,18 @@
 # Mercury VIS–NIR Spectral Metrics, PCA, and Power BI Dashboard
 
 ## Summary
-This project evaluates a broad set of VIS–NIR spectral descriptors to determine how well they differentiate major Mercury surface units using reflectance spectra. The methodology combines (i) descriptor-based feature engineering (e.g., curvature, slopes, color indices, reflectance channels, and band-depth indicators when applicable), (ii) variance-based statistical screening to identify strong individual discriminators, and (iii) Principal Component Analysis (PCA) to assess multivariate structure and separability in a reduced space. The outcome is a reproducible pipeline that produces a cleaned, feature-rich dataset and PCA outputs, and then delivers an interactive exploration of the results through a Power BI dashboard.
+This project presents a reproducible methodology to compute and evaluate VIS–NIR spectral metrics from MESSENGER MASCS/VIRS reflectance spectra (0.4–1.45 µm), applied to 130 spectra sampling four Mercury surface units (LRM, HRP, LBP, Hollows). Metric relevance is assessed through (i) descriptor-based feature engineering (curvature, slopes, color indices, reflectance values, point-by-point spectral channels, and diagnostic band depths), (ii) variance-based statistical ranking, and (iii) PCA on standardized metrics to evaluate multivariate structure and separability. The workflow supports transparent metric prioritization and is paired with an interactive dashboard for unit-wise exploration; the dataset and code are provided in the project repository.
 
 ---
 
 ## Findings
-- Continuum-shape descriptors are the most informative for discriminating Mercury surface units in these subtle VIS–NIR spectra. In particular, **curvature metrics** provide the strongest single-metric separation, with the **UV curvature** parameter consistently showing the clearest differences across units.
-- Slope metrics contribute useful, but weaker, discrimination compared with curvature. They help refine separability when used alongside curvature-related descriptors.
-- Color indices are highly variable but not sufficient on their own to separate all units cleanly; however, they become important when combined with other metrics in multivariate space.
-- PCA confirms multivariate separability, with Hollows forming a compact, clearly isolated cluster and residual overlap among the plains units (e.g., LRM/LRblueP/HRredP), consistent with transitional materials and mixing rather than sharp spectral boundaries.
-- PCA loadings show that correlated behavior matters: despite curvature being the best individual discriminator, the dominant contributors to the reduced PCA structure are mainly color indices and slope-related metrics, indicating that multivariate separation is driven by combinations of correlated descriptors.
-- Band-depth metrics are largely ineffective in this dataset: only weak detections (notably Mg–S–CaS and Fe²⁺-related parameters) exceed the threshold, with no visually prominent absorptions, so band depths provide limited discriminatory power for MASCS/VIRS spectra in this context.
-- Overall, the paper delivers a reproducible metric-evaluation workflow (descriptor computation + variance ranking + PCA) that helps prioritize robust and interpretable features for classification and mapping, and is extendable to larger Mercury datasets and future VIS–NIR observations.
+- **Curvature metrics** dominate spectral variability and provide the strongest single-metric discrimination, with **ultraviolet curvature** (uv_curv) identified as the most effective individual parameter. Reported group means show strong separation (Hollows highest, LBP distinctly lower/negative). 
+- Slope metrics show intermediate discriminative capability (useful but not definitive on their own), and are most informative when interpreted alongside curvature. 
+- Color indices exhibit higher variability than absolute reflectance, but limited standalone separation across all units; they become more important in multivariate combinations. 
+- PCA confirms clear separation in reduced space, with Hollows forming a compact, isolated cluster and minor/residual overlap among the plains units (explicitly: two LRM spectra and one HRP spectrum project within the LBP cluster). PC1 explains 91.02% and PC2 5.78% of total variance. 
+- PCA loadings (|PC1|+|PC2|) are dominated by color indices and slope metrics, specifically the top contributors reported in Table 3: ci_750_415, ci_415_750, vn_sl, n_sl, uv_down, ci_750_950, v_sl, curv_300_600, W1415, W1365. This supports the paper’s point that correlated descriptors structure the PCA space even when curvature is the strongest individual discriminator. 
+- Band-depth metrics show limited effectiveness in this MASCS/VIRS dataset: only weak Mg–S–CaS and Fe²⁺-related features are detected above threshold, with no visually prominent absorptions and no pyroxene-related detections across units. 
+- Overall, the study delivers a reproducible metric-evaluation framework (variance ranking + PCA) that prioritizes robust, interpretable descriptors for surface-unit discrimination and is positioned as extendable to larger Mercury datasets and future observations. 
 
 ---
 
