@@ -22,19 +22,19 @@ This project presents a reproducible methodology to compute and evaluate VIS–N
 - Overall, the study delivers a reproducible metric-evaluation framework that combines **variance-based ranking, PCA, and supervised classification** to prioritize robust, interpretable descriptors for Mercury surface-unit discrimination. The methodology is readily extendable to larger Mercury datasets and future VIS–NIR observations.
 
 <p align="center">
-  <img src="Figures/Fig3.png" width="700">
+  <img src="Figures/Fig3.png" width="600">
 </p>
 
 <p align="center">
-  <img src="Figures/Fig4.png" width="700">
+  <img src="Figures/Fig4.png" width="400">
 </p>
 
 <p align="center">
-  <img src="Figures/Fig7.png" width="500">
+  <img src="Figures/Fig7.png" width="400">
 </p>
 
 <p align="center">
-  <img src="Figures/Fig10.png" width="500">
+  <img src="Figures/Fig10.png" width="400">
 </p>
 
 ---
@@ -43,11 +43,11 @@ This project presents a reproducible methodology to compute and evaluate VIS–N
 The repository also includes a Power BI dashboard for interactive exploration of spectral metrics and Mercury surface units. The dashboard allows quick inspection of curvature, slopes, color indices, reflectance behavior, and other derived descriptors, providing a visual complement to the statistical and PCA-based analysis.
 
 <p align="center">
-  <img src="Figures/Fig8.png" width="700">
+  <img src="Figures/Fig8.png" width="600">
 </p>
 
 <p align="center">
-  <img src="Figures/Fig9.png" width="700">
+  <img src="Figures/Fig9.png" width="600">
 </p>
 
 ---
@@ -68,6 +68,8 @@ The repository also includes a Power BI dashboard for interactive exploration of
 - **The Article**
   - `RMxAA_Mercury-AnaOjeda.pdf`  
   Accepted for publication in the *Revista Mexicana de Astronomía y Astrofísica (RMxAA)*.
+- **Figures**
+  - `Figures` folder 
 
 > **Important:** The Power BI dashboard depends on the CSV exported by the notebook, but I attached the CSVs needed in any case. 
 
@@ -95,7 +97,7 @@ Install the minimal dependencies needed to run the notebook (included in the fir
 
 ## Contact
 
-**Ana V. Ojeda Vera** PhD candidate at CITEDI-IPN, México. 
+**Ana V. Ojeda Vera**
 Doctoral Student in Data Science  
 CITEDI-IPN  
 Email: **aojeda@citedi.mx**
