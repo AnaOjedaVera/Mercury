@@ -1,5 +1,10 @@
 # Mercury VIS–NIR Spectral Metrics, PCA, and Power BI Dashboard
 
+[![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Power BI](https://img.shields.io/badge/Power_BI-F2C811?logo=powerbi&logoColor=black)](https://powerbi.microsoft.com/)
+![RMxAA 2026](https://img.shields.io/badge/RMxAA-2026-0077B5)
+![Publication Status](https://img.shields.io/badge/Publication-Forthcoming-orange)
+
 ## Summary
 This project presents a reproducible methodology to compute and evaluate VIS–NIR spectral metrics from MESSENGER MASCS/VIRS reflectance spectra of Mercury surface units. The analysis was applied to 130 spectra sampling four representative Mercury surface units (LRM, HRP, LBP, and Hollows), and metric relevance was evaluated through: (i) descriptor-based feature engineering, including curvature, slopes, color indices, reflectance values, point-by-point spectral channels, and diagnostic band-depth parameters; (ii) variance-based statistical ranking to assess the individual discriminatory power of the metrics; (iii) Principal Component Analysis (PCA) on standardized features to examine multivariate structure and separability; (iv) supervised multi-class classification using the highest-ranked descriptors to test whether the extracted metrics effectively support surface-unit discrimination. The workflow enables transparent metric prioritization, comparative evaluation, and interactive exploration through a Power BI dashboard, and it is designed to be extendable to larger Mercury datasets and future planetary reflectance studies.
 
